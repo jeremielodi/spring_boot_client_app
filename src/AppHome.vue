@@ -185,7 +185,7 @@ export default {
       }
       
       appMenu.items.push(...userMenu);
-      
+      this.menu = [];
       this.menu.push(appMenu);
       
     },

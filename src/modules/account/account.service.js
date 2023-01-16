@@ -8,6 +8,10 @@ function AccountService() {
   service.userAccounts = (userId) => {
     return service.get(`/list/${userId}`);
   };
+  service.detail = (accountNumber) => {
+    return service.get(`/detail/${accountNumber}`);
+  };
+  
 
   return service;
 }

@@ -149,7 +149,6 @@
 <script>
 import SwitchLanguage from "../../components/SwitchLanguage.vue";
 import NotifyService from "../../service/Notify.service";
-import AppCache from "../../service/appCache";
 import UserService from "./user.service";
 import { defineComponent } from "vue";
 
@@ -165,13 +164,7 @@ export default defineComponent({
     };
   },
   created() {
-    const {by_msauth} = this.$route.query;
-    if(by_msauth) {
-      const clientInitiated = AppCache.get('msauth');
-      if(clientInitiated === `1`) {
-        this.getMsAuthInfo();
-      }
-    }
+
   },
   methods: {
     handleSubmit() {
@@ -216,28 +209,7 @@ export default defineComponent({
 
       return Object.keys(this.validationErrors).length === 0;
     },
-    msauth() {
-      AppCache.set('msauth', 1);
-      const server = this.$store.state.server;
-      window.location = `${server}auth`;
-    },
-    getMsAuthInfo() {
-        this.loading = true;
-      UserService.msauth()
-        .then((res) => {
-          NotifyService.success(this, null, `Welcome ${res.user.name}`);
-          this.$store.commit("updateSession", res);
-          AppCache.set('msauth', -121);
-          this.$router.push("/home");
-        })
-        .catch((er) => {
-          console.log(er);
-          NotifyService.danger(this, null, "FORM.ERRORS.INVALID_LOGIN_OR_password");
-        })
-        .finally(() => {
-          this.loading = false;
-        });
-    },
+  
     resetForm() {
       this.user = {
         name: null,

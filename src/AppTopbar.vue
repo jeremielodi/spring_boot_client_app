@@ -3,9 +3,9 @@
     <router-link to="/home" class="layout-topbar-logo">
       <img
         alt="Logo"
-        :src="darkTheme ? '/images/IMAicon.jpg' : '/images/IMAicon.jpg'"
+        :src="darkTheme ? '/images/logo.PNG' : '/images/logo.PNG'"
       />
-      <span>DIGIPAY</span>
+      <span></span>
     </router-link>
     <button
       class="p-link layout-menu-button layout-topbar-button"

@@ -27,6 +27,17 @@ const routes = [
         name: 'activities',
         component: () => import('./modules/account/activities.vue'),
       },
+      {
+        path: '/transfer_funds',
+        name: 'transfer_funds',
+        component: () => import('./modules/transactions/transfer.vue'),
+      },
+      {
+        path: '/funds_withdrawal',
+        name: 'funds_withdrawal',
+        component: () => import('./modules/transactions/withdrawal.vue'),
+      },
+      
       
     ]
   },

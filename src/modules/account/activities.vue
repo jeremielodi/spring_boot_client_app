@@ -22,7 +22,7 @@
 
           <div class="p-field">
             <Label>{{ $t('FORM.LABELS.BALANCE') }}</Label>
-            <div><b>{{ selectedAccount.balance || 0 }}</b></div>
+            <div><b>{{ selectedAccount.balance || 0 }} {{ selectedAccount.currencySymbol }}</b></div>
           </div>
         </div>
       </div>
@@ -107,9 +107,7 @@ export default {
           return account;
         });
         this.selectedAccount = this.accounts[0] || {};
-        setTimeout(() => {
-          this.OnAccountChange();
-        }, 1000);
+        this.OnAccountChange();
       });
     },
     OnAccountChange() {
@@ -117,7 +115,7 @@ export default {
     },
     getTransactions(accountId) {
       TransactionService.listForUser(accountId).then((transactions) =>{
-        this.transactions = transactions;
+        this.transactions = transactions.reverse();
       });
     },
     onRowSelect($event) {

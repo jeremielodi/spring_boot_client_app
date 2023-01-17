@@ -8,7 +8,7 @@
         <div class="p-d-flex p-ai-center p-dir-col p-pt-6 p-px-3">
           <div class="p-d-flex p-jc-center">
             <div class="card">
-              <h5 class="p-text-center">Transfer d'argent</h5>
+              <h5 class="p-text-center">Transfert d'argent</h5>
 
               <form @submit.prevent="handleSubmit()" class="p-fluid">
                 <div class="p-field">

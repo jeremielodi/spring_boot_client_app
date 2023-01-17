@@ -158,7 +158,7 @@ export default {
         icon: "pi pi-file-o",
         },
         {
-        label: "Transfer d'argent", // activity
+        label: "Transfert d'argent", // activity
         to: `/transfer_funds`,
         icon: "pi pi-file-o",
         },

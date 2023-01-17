@@ -57,7 +57,7 @@ Il faut signaler que je n'ai pas mis des confirmations pour l'opération de tran
 <img src="./screens/activities.PNG" />
 
 
-### Transfer
+### Transfert
 
 <img src="./screens/transfer.PNG" />
 

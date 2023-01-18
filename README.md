@@ -52,6 +52,7 @@ $ yarn serve
 Il faut signaler que je n'ai pas mis des confirmations pour l'opération de transfert ou de retrait, juste pour que mon code soit très lisible. Vu qu'ici je considère que le plus important est de démontrer comment consommer les APIs du micro service.
 </p>
 <br/>
+
 ### Activités
 
 <img src="./screens/activities.PNG" />
@@ -64,3 +65,11 @@ Il faut signaler que je n'ai pas mis des confirmations pour l'opération de tran
 ### Rétrait
 
 <img src="./screens/withdrawal.PNG" />
+
+<br/>
+
+### Extrait d'utilisateur de ce template dans un autre project.
+
+<a href="https://primefaces.org/primevue/setup">Thème</a>
+
+<img src="./screens/ui_sample.gif" />

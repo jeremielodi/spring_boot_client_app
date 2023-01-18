@@ -68,8 +68,9 @@ Il faut signaler que je n'ai pas mis des confirmations pour l'opération de tran
 
 <br/>
 
-### Extrait d'utilisateur de ce template dans un autre project.
+### Template utilisé.
+
+
+<a href="https://www.primefaces.org/sakai-vue">sakai-vue</a>
 
 <a href="https://primefaces.org/primevue/setup">Thème</a>
-
-<img src="./screens/ui_sample.gif" />
